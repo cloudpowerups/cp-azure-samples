@@ -18,11 +18,11 @@ In order to publish this application to Azure, perform following steps:
 	1.4. Settings: add "StorageConnectionString"
 	1.5. Endpoints: open 2 public HTTP ports -> 80 & 8088
 	1.6. Websites:
-		1.6.1. Web Api: port 8088
+		1.6.1. WebApi: port 8088
 		1.6.2. Frontend: port 80
-			1.6.2.1. Note: if you are using Try account you will not be able to host Frontend separately. You can still merge it into WebApi if needed or not skip it.
+		1.6.3. Note: if you are using Try account you will not be able to host both WebApi & Frontend. You can still merge them together if needed or deploy separately.
 	1.7. Windows Services:
-		1.7.1. Name: CP.Azure.Samples.ProcessingEngine
+		1.7.1. Name: ProcessingEngine
 		1.7.2. Executable: CP.Azure.Samples.MultiComponentRole.Engine.exe
 2. Download the package, unzip it and copy next to Publish.ps1 script
 3. Execute Publish.ps1

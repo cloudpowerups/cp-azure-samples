@@ -40,8 +40,8 @@
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "A sample windows service for Multi Component Role";
-            this.serviceInstaller1.DisplayName = "CP.Azure.Samples.ProcessingEngine";
-            this.serviceInstaller1.ServiceName = "CP.Azure.Samples.ProcessingEngine";
+            this.serviceInstaller1.DisplayName = "ProcessingEngine";
+            this.serviceInstaller1.ServiceName = "ProcessingEngine";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller

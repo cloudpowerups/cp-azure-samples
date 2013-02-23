@@ -31,7 +31,7 @@
             // 
             // ProcessingEngine
             // 
-            this.ServiceName = "CP.Azure.Samples.ProcessingEngine";
+            this.ServiceName = "ProcessingEngine";
 
         }
 

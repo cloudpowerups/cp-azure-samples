@@ -50,7 +50,7 @@ if (Test-Path $package) {
 }
 
 # Locate paths of sites and services
-$engineTarget = (Get-ChildItem -Path $deploy -Filter CP.Azure.Samples.ProcessingEngine.txt -Recurse).DirectoryName
+$engineTarget = (Get-ChildItem -Path $deploy -Filter ProcessingEngine.txt -Recurse).DirectoryName
 $webApiTarget = (Get-ChildItem -Path $deploy -Filter WebApi.txt -Recurse).DirectoryName
 $frontendTarget = (Get-ChildItem -Path $deploy -Filter Frontend.txt -Recurse).DirectoryName
 
