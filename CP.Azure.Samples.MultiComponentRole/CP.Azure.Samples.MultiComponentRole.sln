@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP.Azure.Samples.MultiComponentRole.Frontend", "CP.Azure.Samples.MultiComponentRole.Frontend\CP.Azure.Samples.MultiComponentRole.Frontend.csproj", "{0D3F51D9-BB56-48AF-BBBF-C4D04E0E7621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP.Azure.Samples.MultiComponentRole.Api", "CP.Azure.Samples.MultiComponentRole.Api\CP.Azure.Samples.MultiComponentRole.Api.csproj", "{A6DEE06A-FF2F-4390-B0FD-7B46A419743E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP.Azure.Samples.MultiComponentRole.Engine", "CP.Azure.Samples.MultiComponentRole.Engine\CP.Azure.Samples.MultiComponentRole.Engine.csproj", "{168E18BC-38AD-4D36-97D0-4C3FCE8F78A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP.Azure.Samples.MultiComponentRole.Model", "CP.Azure.Samples.MultiComponentRole.Model\CP.Azure.Samples.MultiComponentRole.Model.csproj", "{CFE9F178-49B3-49DA-856C-0B2D6CE7555D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9E0F494E-B2DD-4C44-B8CD-1819AE8B9CB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D3F51D9-BB56-48AF-BBBF-C4D04E0E7621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3F51D9-BB56-48AF-BBBF-C4D04E0E7621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3F51D9-BB56-48AF-BBBF-C4D04E0E7621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3F51D9-BB56-48AF-BBBF-C4D04E0E7621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6DEE06A-FF2F-4390-B0FD-7B46A419743E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6DEE06A-FF2F-4390-B0FD-7B46A419743E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6DEE06A-FF2F-4390-B0FD-7B46A419743E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6DEE06A-FF2F-4390-B0FD-7B46A419743E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{168E18BC-38AD-4D36-97D0-4C3FCE8F78A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168E18BC-38AD-4D36-97D0-4C3FCE8F78A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168E18BC-38AD-4D36-97D0-4C3FCE8F78A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168E18BC-38AD-4D36-97D0-4C3FCE8F78A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE9F178-49B3-49DA-856C-0B2D6CE7555D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE9F178-49B3-49DA-856C-0B2D6CE7555D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE9F178-49B3-49DA-856C-0B2D6CE7555D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE9F178-49B3-49DA-856C-0B2D6CE7555D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFE9F178-49B3-49DA-856C-0B2D6CE7555D} = {9E0F494E-B2DD-4C44-B8CD-1819AE8B9CB0}
+	EndGlobalSection
+EndGlobal

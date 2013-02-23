@@ -1,0 +1,50 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">Multi Component Role: Web Api</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h2>File download API</h2>
+            </hgroup>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <h3>Please, enter file url to download:</h3>
+        <ol class="round">
+            <li class="one">
+                <input id="fileUrl" value="http://dotfiles.github.com/images/forktocat.jpg">
+            </li>
+
+            <li class="two">
+                <a href="#" id="downloadButton">Download it!</a>
+                <br />
+                <br />
+            </li>
+            
+            <li class="three" id="sentSuccess">
+            </li>
+        </ol>
+    </section>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $('#downloadButton').click(function () {
+            $.ajax({
+                url: "/api/download/",
+                type: 'POST',
+                data: '=' + $('#fileUrl').val()
+            }).done(function () {
+                $('#sentSuccess').html("<span id=\"sentSuccess\">Queued to download: " + $('#fileUrl').val() + "</span><br /><br />");
+            });
+        });
+    </script>
+}
+

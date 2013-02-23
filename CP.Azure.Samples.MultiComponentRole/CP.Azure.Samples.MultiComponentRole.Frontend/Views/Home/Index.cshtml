@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CP.Azure.Samples.MultiComponentRole.Model.FileDownloadEntity>
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">Multi Component Role: Frontend</a>
+            </p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h2>Recent file downloads</h2>
+            </hgroup>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <table>
+            <thead>
+                <tr>
+                    <th>Uri</th>
+                    <th>Timestamp</th>
+                    <th>Result</th>
+                    <th>By</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var entity in Model)
+                {
+                    <tr>
+                        <td>@entity.SourceUrl</td>
+                        <td>@entity.Timestamp</td>
+                        <td>
+                            @if (@entity.IsDownloaded) 
+                            {
+                                if (entity.IsImage)
+                                {
+                                    <img src="@entity.SavedLocation" style="max-width: 200px;"/>
+                                }
+                                else
+                                {
+                                    <a href="@entity.SavedLocation">Download</a>
+                                }
+                            }
+                            else
+                            {
+                                <span>Waiting...</span>
+                            }
+                        </td>
+                        <td>@entity.ProcessedBy</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+</div>
