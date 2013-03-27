@@ -108,6 +108,6 @@ Backup*/
 UpgradeLog*.XML
 
 # Publish results
+!CP.Azure.Samples.RavenDB/RavenWeb/bin
 deploy/
 output/
-FileDownloadService.factory.exe

@@ -11,7 +11,30 @@ Application shown here is a scalable file download service which consists of 3 c
 Publishing
 ---------------
 In order to publish this application to Azure, perform following steps:
-1. Create a package using Cloud Power-Ups service with these parameters:
+1. Execute Publish.ps1
+2. Edit MultiComponentRole.cscfg file in "deploy" folder:
+	2.1. Enter value for "StorageConnectionString"
+		2.1.1. Note: this is a connection string to your Azure storage account in format: DefaultEndpointsProtocol=http;AccountName=[AccountName];AccountKey=[AccountKey]
+	2.2. Set "instanceCount" to "2" (or whatever you prefer)
+3. Go to Windows Azure Portal
+4. Create a new Cloud Service called "File Download Service"
+5. Deploy package to Production
+6. Done!
+
+---------------
+Testing
+---------------
+1. Navigate to <service_name>.cloudapps.net:8088
+2. Enter file url to download
+3. Click "Download it!"
+	3.1. Alternatively you can send a POST to <service_name>.cloudapps.net:80/api/download/ with "=<file_uri>" body.
+4. Navigate to <service_name>.cloudapps.net
+5. Now you can see files uploaded to your storage
+
+---------------
+Manual package creation details
+---------------
+1. A package has been created using Cloud Power-Ups service with these parameters:
 	1.1. Service Name: File Download Service
 	1.2. Role Name: Multi Component Role
 	1.3. Size: Extra Small
@@ -25,22 +48,3 @@ In order to publish this application to Azure, perform following steps:
 		1.7.1. Name: ProcessingEngine
 		1.7.2. Executable: CP.Azure.Samples.MultiComponentRole.Engine.exe
 2. Download the package, unzip it and copy next to Publish.ps1 script
-3. Execute Publish.ps1
-4. Edit MultiComponentRole.cscfg file in "output" folder:
-	4.1. Enter value for "StorageConnectionString"
-		4.1.1. Note: this is a connection string to your Azure storage account in format: DefaultEndpointsProtocol=http;AccountName=[AccountName];AccountKey=[AccountKey]
-	4.2. Set "instanceCount" to "2" (or whatever you prefer)
-5. Go to Windows Azure Portal
-6. Create a new Cloud Service called "File Download Service"
-7. Deploy package to Production
-8. Done!
-
----------------
-Testing
----------------
-1. Navigate to <service_name>.cloudapps.net:8088
-2. Enter file url to download
-3. Click "Download it!"
-	3.1. Alternatively you can send a POST to <service_name>.cloudapps.net:80/api/download/ with "=<file_uri>" body.
-4. Navigate to <service_name>.cloudapps.net
-5. Now you can see files uploaded to your storage

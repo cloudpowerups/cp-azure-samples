@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" serviceName="RavenMasterSlaveReads" osFamily="2" osVersion="*" schemaVersion="2012-10.1.8" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="RavenDB-Master">
+    <ConfigurationSettings>
+      <Setting name="DriveStorageConnection_RavenDrive" value="DefaultEndpointsProtocol=http;AccountName=<acc>;AccountKey=<key>" />
+    </ConfigurationSettings>
+    <Instances count="1" />
+  </Role>
+  <Role name="RavenDB-Slave">
+    <ConfigurationSettings>
+      <Setting name="ReadsDBConnectionString" value="Url = http://<service>.cloudapp.net:8080; ApiKey = ReadsKey/6fY6iLqZRYe; Database = ReadsDB" />
+      <Setting name="WritesDBConnectionString" value="Url = http://<service>.cloudapp.net; ApiKey = WritesKey/5qkX80Jar7D37Gm7yjtL08; Database = WritesDB" />
+    </ConfigurationSettings>
+    <Instances count="2" />
+  </Role>
+</ServiceConfiguration>
